@@ -4,11 +4,12 @@ pipeline {
     //     HOME = '.'
     // }
     stages {
-        // stage('test') {
-        //     steps {
-        //         sh 'chown -R 995:991 "/.npm"'
-        //     }
-        // }
+        stage('test') {
+            steps {
+                // sh 'chown -R 995:991 "/.npm"'
+                sh 'cat /.dockerenv'
+            }
+        }
         stage('install node modules') {
             steps {
                 sh 'npm --prefix / install /'
