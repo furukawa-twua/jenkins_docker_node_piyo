@@ -4,6 +4,11 @@ pipeline {
     //     HOME = '.'
     // }
     stages {
+        stage('test') {
+            steps {
+                sh 'sudo chown -R 995:991 "/.npm"'
+            }
+        }
         stage('install node modules') {
             steps {
                 sh 'npm --prefix ~/ install ~/'
