@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:latest
 
 # COPY ./src/*.js ./src/*.json ./
 COPY ./src/index.js ~/index.js
