@@ -1,11 +1,6 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('test') {
-            steps {
-                sh 'ls'
-            }
-        }
         stage('install node modules') {
             steps {
                 sh 'npm install'
