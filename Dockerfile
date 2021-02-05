@@ -4,4 +4,4 @@ USER node
 
 WORKDIR /home/node
 
-COPY ./src/*.js ./src/*.json .
+COPY ./src/*.js ./src/*.json ./
