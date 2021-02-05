@@ -7,7 +7,7 @@ pipeline {
         stage('test') {
             steps {
                 // sh 'chown -R 995:991 "/.npm"'
-                sh 'test -e /.dockerenv'
+                sh 'whoami'
             }
         }
         stage('install node modules') {
