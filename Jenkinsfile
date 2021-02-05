@@ -6,14 +6,14 @@ pipeline {
     stages {
         stage('install node modules') {
             steps {
-                dir(path: '/home/node/') {
+                dir('/home/node/') {
                     sh 'npm install'
                 }
             }
         }
         stage('run node app') {
             steps {
-                dir(path: '/home/node/') {
+                dir('/home/node/') {
                     sh 'npm start'
                 }
             }
