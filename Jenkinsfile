@@ -1,7 +1,7 @@
 pipeline {
     agent { dockerfile true }
     environment {
-        HOME = '/'
+        HOME = '.'
     }
     stages {
         stage('install node modules') {
