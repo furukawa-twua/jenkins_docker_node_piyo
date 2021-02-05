@@ -1,18 +1,21 @@
 pipeline {
     agent { dockerfile true }
-    // environment {
-    //     HOME = '.'
-    // }
+    environment {
+        HOME = '.'
+    }
     stages {
-        // stage('install node modules') {
-        //     steps {
-        //         sh 'npm install'
-        //     }
-        // }
+        stage('install node modules') {
+            steps {
+                dir(path: '/') {
+                    sh 'npm install'
+                }
+            }
+        }
         stage('run node app') {
             steps {
-                // sh 'npm start'
-                sh 'node /app.js'
+                dir(path: '/') {
+                    sh 'npm start'
+                }
             }
         }
     }
