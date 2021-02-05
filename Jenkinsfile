@@ -6,16 +6,12 @@ pipeline {
     stages {
         stage('install node modules') {
             steps {
-                dir('/home/node') {
-                    sh 'npm install'
-                }
+                sh 'npm --prefix /home/node install /home/node'
             }
         }
         stage('run node app') {
             steps {
-                dir('/home/node') {
-                    sh 'npm start'
-                }
+                sh 'npm --prefix /home/node start /home/node'
             }
         }
     }
