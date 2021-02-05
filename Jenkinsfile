@@ -4,19 +4,19 @@ pipeline {
     //     HOME = '.'
     // }
     stages {
-        stage('test') {
-            steps {
-                sh 'chown -R 995:991 "/.npm"'
-            }
-        }
+        // stage('test') {
+        //     steps {
+        //         sh 'chown -R 995:991 "/.npm"'
+        //     }
+        // }
         stage('install node modules') {
             steps {
-                sh 'npm --prefix ~/ install ~/'
+                sh 'npm --prefix / install /'
             }
         }
         stage('run node app') {
             steps {
-                sh 'npm --prefix ~/ start ~/'
+                sh 'npm --prefix / start /'
             }
         }
     }
