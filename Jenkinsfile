@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                sh 'sudo chown -R 995:991 "/.npm"'
+                sh 'chown -R 995:991 "/.npm"'
             }
         }
         stage('install node modules') {
