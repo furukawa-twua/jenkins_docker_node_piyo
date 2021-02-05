@@ -7,7 +7,7 @@ pipeline {
         stage('test') {
             steps {
                 // sh 'chown -R 995:991 "/.npm"'
-                sh 'cat /.dockerenv'
+                sh 'test -e /.dockerenv'
             }
         }
         stage('install node modules') {
